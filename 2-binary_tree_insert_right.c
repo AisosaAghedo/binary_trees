@@ -31,13 +31,13 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 
 	if (parent == NULL)
 		return (NULL);
-	right_child = binary_tree_node_2(parent, value);
-	if (right_child == NULL)
+	rightchild = binary_tree_node_2(parent, value);
+	if (rightchild == NULL)
 		return (NULL);
-	right_child->right = parent->right;
-	if (right_child->right != NULL)
-		right_child->right->parent = right_child;
-	parent->right = right_child;
-	return (right_child);
+	rightchild->right = parent->right;
+	if (rightchild->right != NULL)
+		rightchild->right->parent = rightchild;
+	parent->right = rightchild;
+	return (rightchild);
 
 }
